@@ -1,0 +1,27 @@
+{
+  "@context": { 
+        "@vocab": "http://schema.org/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema" : "http://schema.org/"         
+   },       
+   "@graph":[
+   {       
+        "@type": "http://localhost:3000/test.html" ,
+        "givenName": 111,
+        "familyName": 222        
+   },
+   {       
+        "@type": ["Person1","Person2"] ,
+        "givenName": 333,
+        "familyName": 444,
+        "age": 555   
+   },
+   {       
+        "@type": ["Person1","Person2","Person3"] ,
+        "givenName": 666,
+        "familyName": 777,
+        "age": 888,
+        "height": 999   
+   }
+   ]       
+}

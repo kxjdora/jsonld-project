@@ -1,0 +1,27 @@
+{
+  "@context": { 
+        "@vocab": "http://www.w3.org/ns/shacl#",
+        "schema": "http://schema.org/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph":[
+    {
+      "@id": "schema:PersonShape",              
+      "targetClass" : {"@id": "schema:Person"},
+      "property":[
+         {
+         "path":{"@id":"schema:givenName"},
+         "datatype": {"@id":"xsd:string"}           
+         },
+         {
+         "path":{"@id":"schema:familyName"},
+          "datatype": {"@id":"xsd:string"}            
+         },
+         {
+          "path":{"@id":"schema:birthDate"},
+           "datatype": {"@id":"xsd:dateTime"}            
+          }
+       ]
+    }
+  ]
+}

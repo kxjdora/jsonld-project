@@ -1,0 +1,24 @@
+<html>
+  <head>
+      <!-- Meta Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="./stylesheets/jsonld-vis.css">
+    <style type = "text/css">
+      </style>
+  </head>
+  <body>
+    <div id="visualized" style="background: white"></div>
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/jsonld@1.0.0/dist/jsonld.min.js"></script>
+  <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script> 
+  <script src="https://d3js.org/d3-drag.v1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.7/d3-tip.min.js"></script>
+  <script src="./js/jsonld-vis.js"></script> 
+  <script>
+      var input;
+      d3.jsonldVis(input, '#visualized');
+  </script>
+  </body>
+</html>

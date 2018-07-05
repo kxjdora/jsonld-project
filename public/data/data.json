@@ -1,0 +1,15 @@
+{
+    "@context": { 
+          "@vocab": "http://schema.org/",
+          "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+          "schema" : "http://schema.org/"         
+     },       
+     "@graph":[
+        {       
+          "@type": ["Person"] ,
+          "givenName": 111,
+          "familyName": 222,
+          "birthDate": "1990-01-22"             
+        }
+     ]       
+  }
