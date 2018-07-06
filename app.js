@@ -11,7 +11,7 @@ app.set('view engine', 'jade');
 app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.get(/\/(.+)/, function (req, res) {
+app.get(/\/T1(.+)/, function (req, res) {
   var url=req.params[0];
   if(url.indexOf('.')!=-1){
      url=url.slice(0,url.indexOf('.'));
