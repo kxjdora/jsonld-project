@@ -4,43 +4,37 @@
 	curl指定Accept返回对应格式的内容									
 										
 启动										
-	node app.js									
+	node index.js									
 										
 主要代码url										
-	C:\work\task\JSON-LD\code\jsonld-project\app.js					(app.get(/\/T(.+)/)				
+	jsonld-project\app.js	(app.get(/\/(.+)/)				
 										
 测试例子
 
-	curl  --header "Accept: application/json" -L http://localhost:3000/Ttest							//测试json		
+	curl  --header "Accept: application/json" -L https://sleepy-oasis-49343.herokuapp.com/test  //测试json		
   
-	curl  --header "Accept: text/html" -L http://localhost:3000/Ttest							//测试html		
+	curl  --header "Accept: text/html" -L https://sleepy-oasis-49343.herokuapp.com/test	//测试html		
   
-	curl  --header "Accept: application/json" -L http://localhost:3000/Ttes							//测试404		
+	curl  --header "Accept: application/json" -L https://sleepy-oasis-49343.herokuapp.com/test  //测试404		
   
 							
 **功能2--shacl-validate**		
 
-•	turtle  验证		
-
-	启动									
-		node index.1.js			
+•	turtle  验证				
     
 	浏览器输入									
-		http://localhost:3000/t								
+		https://sleepy-oasis-49343.herokuapp.com/t								
 								
 										
 •	jsonld 验证			
 
 	描述									
-		从两个URL中获取shape和data文件并写入到本地进行验证			
-    
-	启动									
-		node index.2.js				
+		从两个URL中获取shape和data文件并写入到本地进行验证						
     
 	浏览器输入									
-		http://localhost:3000/t								
+		https://sleepy-oasis-49343.herokuapp.com/t_jsonld								
 						
 										
 **功能3--d3.js**										
 	直接访问：									
-		http://localhost:3000/d3_tree.html								
+		https://sleepy-oasis-49343.herokuapp.com/d3_tree.html								
