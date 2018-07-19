@@ -56,16 +56,18 @@ function fread(path) {
     return fs.readFileSync(path, 'utf-8');
 }
 
-function validate (res) {
+function validate (cb) {
     var sbody = fread(surl);
     var dbody = fread(durl);
     var g = new $rdf.graph();
-    var s = new shacl(g, undefined, undefined,undefined);
+    var s = new shacl(g, undefined, undefined,true);
     $rdf.parse(sbody, g, why, 'application/ld+json', function(err, expand){      
         s.addGraph(expand);
         $rdf.parse(dbody, g, why, 'application/ld+json', function(err, expand){      
             s.addGraph(expand)
-            s.execute();
+            return s.execute(function(report){
+                cb(report)
+            });
         });
     });   
 };
@@ -77,30 +79,32 @@ function load_graph(file) {
     return g;
 };
 
-function test(res) {
+function test(cb) {
     var schema = load_graph(sfile)
     var data = load_graph(dfile)
     var g = new $rdf.graph()
-    var s = new shacl(g, undefined, undefined,undefined);
+    var s = new shacl(g, undefined, undefined,true);
     s.addGraph(schema).addGraph(data)
-    s.execute();
-};
-
-function test_jsonld(res) {
-    validate(res);   
-    res.send("jsonld validate ,look at result in console please!");
+    return s.execute(function(report){
+        cb(report)
+    });
 };
 
 //jsonld Test Shacl Validator
 app.get('/t_jsonld', function (req, res) {
-    test_jsonld(res);
+    validate(function(report){
+        res.set('Content-Type', 'text/turtle');
+        res.send(new Buffer("Shacl Validator(jsonld format)\n\n"+report));
+    });   
 })
 
 //turtle Test Shacl Validator
 app.get('/t', function (req, res) {
-    //    shacl_validate();
-    test();
-    res.send("turtle, Test Shacl Validation!");
+    test(function(report){
+        res.set('Content-Type', 'text/turtle');
+        res.send(new Buffer("Shacl Validator(turtle format)\n\n"+report));
+    })
+    
 })
 
 // curl access url and assign accept parameter
