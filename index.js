@@ -26,13 +26,13 @@ const a = RDF('type')
 const why = "http://tr.com"
 
 var surl = __dirname + "/public/data/s.json"; //新建一个本地文件
-var slink = "http://127.0.0.1:3000/data/schema.json";
+var slink = "https://sleepy-oasis-49343.herokuapp.com/data/schema.json";
 const s_stream = fs.createWriteStream(surl);  //创建surl文件的写入流
 const s_req = superagent.get(slink);          //获得slink的超级代理
 s_req.pipe(s_stream);                         //把slink中的内容写到本地文件surl中
 
 var durl = __dirname + "/public/data/d.json";
-var dlink = "http://127.0.0.1:3000/data/data.json";
+var dlink = "http://sleepy-oasis-49343.herokuapp.com/data/data.json";
 const d_stream = fs.createWriteStream(durl);
 const d_req = superagent.get(dlink);
 d_req.pipe(d_stream); 
