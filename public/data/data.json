@@ -8,7 +8,7 @@
         {       
           "@type": ["Person"] ,
           "givenName": 111,
-          "familyName": 222,
+          "familyName": "222",
           "birthDate": "1990-01-22"             
         }
      ]       
