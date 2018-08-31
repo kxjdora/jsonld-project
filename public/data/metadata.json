@@ -1,0 +1,3628 @@
+{
+  "@graph": [
+    {
+      "@id": "ecp://dbor/2018/08/29/futures-options/metadata/",
+      "@type": [
+        "owl:Ontology",
+        "orca:metamodel"
+      ],
+      "orca:definition-id": {
+        "@value": "1",
+        "@type": "xsd:long"
+      },
+      "orca:name": "fo",
+      "orca:display-name": "Futures & Options",
+      "orca:description": "Metamodel that describes the data model of future options.",
+      "orca:model-space": {
+        "@id": "ecp://dbor/2018/08/29/futures-options/metadata/"
+      },
+      "orca:data-space": {
+        "@id": "ecp://dbor/futures-options/data#"
+      },
+      "dcterms:isVersionOf": {
+        "@id": "ecp://dbor/futures-options/metadata/"
+      },
+      "rdfs:member": [
+        {
+          "@id": "ecp://dbor/2018/08/29/futures-options/metadata/Spec",
+          "@type": [
+            "sh:NodeShape",
+            "orca:EntityDefinitionShape"
+          ],
+          "rdfs:subClassOf": [
+            {
+              "@id": "ecp://dbor/2018/01/01/ORCASchema/Entity"
+            }
+          ],
+          "orca:definition-id": {
+            "@value": "1",
+            "@type": "xsd:long"
+          },
+          "orca:name": "Spec",
+          "orca:display-name": "Contract Specification",
+          "orca:description": "Spec ...",
+          "sh:property": [
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/source-exchange"
+              },
+              "sh:minCount": 1,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/source-exchange",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1001",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "source-exchange",
+                "orca:display-name": "Source Exchange",
+                "orca:description": "Source Mic",
+                "orca:language-aware": false,
+                "orca:indexed": true,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": true,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "IRI",
+                "ui-hints:referenced-attribute": {
+                  "@id": "ecp://dbor/fmm/metadata/market-name"
+                },
+                "ui-hints:visible": true,
+                "search-hints:search-key": true,
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:nodeKind": {
+                    "@id": "sh:IRI"
+                  },
+                  "sh:class": {
+                    "@id": "ecp://dbor/fmm/metadata/market"
+                  },
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/source-classification"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/source-classification",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1002",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "source-classification",
+                "orca:display-name": "SOURCE CLASSIFICATION",
+                "orca:description": "Source classification",
+                "orca:language-aware": false,
+                "orca:indexed": true,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/group-ticker"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/group-ticker",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1003",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "group-ticker",
+                "orca:display-name": "GROUP TICKER",
+                "orca:description": "Group Ticker",
+                "orca:language-aware": false,
+                "orca:indexed": true,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 10,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/tick-size"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/tick-size",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1004",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "tick-size",
+                "orca:display-name": "TICK SIZE",
+                "orca:description": "Minimum Price Increment - the smallest increment in which a price can be stated.",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "Number",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:decimal"
+                  },
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/lot-unit"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/lot-unit",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1005",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "lot-unit",
+                "orca:display-name": "LOT UNIT",
+                "orca:description": "Lot Unit",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/tick-size-approved"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/tick-size-approved",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1006",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "tick-size-approved",
+                "orca:display-name": "TICK SIZE APPROVED",
+                "orca:description": "TICK SIZE APPROVED",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 10,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/tick-size-currency"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/tick-size-currency",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1007",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "tick-size-currency",
+                "orca:display-name": "TICK SIZE CURRENCY",
+                "orca:description": "TICK SIZE CURRENCY",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "IRI",
+                "ui-hints:referenced-attribute": {
+                  "@id": "ecp://dbor/2018/01/01/trcs/metadata/iso-code"
+                },
+                "ui-hints:visible": true,
+                "search-hints:search-key": true,
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:nodeKind": {
+                    "@id": "sh:IRI"
+                  },
+                  "sh:class": {
+                    "@id": "ecp://dbor/2018/01/01/trcs/metadata/currency"
+                  },
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/delivery-method"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/delivery-method",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1008",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "delivery-method",
+                "orca:display-name": "METHOD OF DELIVERY",
+                "orca:description": "METHOD OF DELIVERY",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/cfi-code"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/cfi-code",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1009",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "cfi-code",
+                "orca:display-name": "CFI CODE",
+                "orca:description": "CFI CODE",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/pricing-unit"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/pricing-unit",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1010",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "pricing-unit",
+                "orca:display-name": "PRICING UNIT",
+                "orca:description": "PRICING UNIT",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/spec-type"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/spec-type",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1013",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "spec-type",
+                "orca:display-name": "TYPE",
+                "orca:description": "TYPE",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/quotation-currency"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/quotation-currency",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1014",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "quotation-currency",
+                "orca:display-name": "QUOTATION CURRENCY",
+                "orca:description": "QUOTATION CURRENCY",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "IRI",
+                "ui-hints:referenced-attribute": {
+                  "@id": "ecp://dbor/2018/01/01/trcs/metadata/iso-code"
+                },
+                "ui-hints:visible": true,
+                "search-hints:search-key": true,
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:nodeKind": {
+                    "@id": "sh:IRI"
+                  },
+                  "sh:class": {
+                    "@id": "ecp://dbor/2018/01/01/trcs/metadata/currency"
+                  },
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/quotation-currency-approved"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/quotation-currency-approved",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1015",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "quotation-currency-approved",
+                "orca:display-name": "QUOTATION CURRENCY APPROVED",
+                "orca:description": "QUOTATION CURRENCY APPROVED",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/fx-base-currency"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/fx-base-currency",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1016",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "fx-base-currency",
+                "orca:display-name": "FX BASE CURRENCY",
+                "orca:description": "FX BASE CURRENCY",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "IRI",
+                "ui-hints:referenced-attribute": {
+                  "@id": "ecp://dbor/2018/01/01/trcs/metadata/iso-code"
+                },
+                "ui-hints:visible": true,
+                "search-hints:search-key": true,
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:nodeKind": {
+                    "@id": "sh:IRI"
+                  },
+                  "sh:class": {
+                    "@id": "ecp://dbor/2018/01/01/trcs/metadata/currency"
+                  },
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/fx-quote-currency"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/fx-quote-currency",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1017",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "fx-quote-currency",
+                "orca:display-name": "FX QUOTE CURRENCY",
+                "orca:description": "FX QUOTE CURRENCY",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "IRI",
+                "ui-hints:referenced-attribute": {
+                  "@id": "ecp://dbor/2018/01/01/trcs/metadata/iso-code"
+                },
+                "ui-hints:visible": true,
+                "search-hints:search-key": true,
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:nodeKind": {
+                    "@id": "sh:IRI"
+                  },
+                  "sh:class": {
+                    "@id": "ecp://dbor/2018/01/01/trcs/metadata/currency"
+                  },
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/lot-size"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/lot-size",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1018",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "lot-size",
+                "orca:display-name": "LOT Size",
+                "orca:description": "Lot Size",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "Number",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:decimal"
+                  },
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/spec-name"
+              },
+              "sh:minCount": 1,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/spec-name",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1019",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "spec-name",
+                "orca:display-name": "SPEC NAME",
+                "orca:description": "Spec Name",
+                "orca:language-aware": false,
+                "orca:indexed": true,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 200,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/spec-description"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/spec-description",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1020",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "spec-description",
+                "orca:display-name": "DESCRIPTION",
+                "orca:description": "DESCRIPTION",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 2000,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/test-adf-21"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/test-adf-21",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1021",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "test-adf-21",
+                "orca:display-name": "test-adf-21 DN",
+                "orca:description": "test-adf-21 DES",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": false,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "ui-hints:visible": true,
+                "search-hints:search-key": false,
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/ejvdemo"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 2,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/ejvdemo",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1095776958454",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "ejvdemo",
+                "orca:display-name": "ejvdemo",
+                "orca:description": "ejvdemo",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": false,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "ui-hints:visible": true,
+                "search-hints:search-key": false,
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 2,
+                  "sh:maxLength": 5,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/YINGSPEC"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/YINGSPEC",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1416071074606",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "YINGSPEC",
+                "orca:display-name": "a",
+                "orca:description": "y",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": false,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "ui-hints:visible": true,
+                "search-hints:search-key": false,
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 1,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/testjc"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 2,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/testjc",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "2713482369371",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "testjc",
+                "orca:display-name": "testjc",
+                "orca:description": "testjc",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "ui-hints:visible": true,
+                "search-hints:search-key": false,
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 10,
+                  "sh:maxLength": 20,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ],
+          "orca:AttributeGroup": [
+            {
+              "@type": [
+                "orca:AttributeGroup"
+              ],
+              "orca:definition-id": {
+                "@value": "1",
+                "@type": "xsd:long"
+              },
+              "orca:name": "identifiers",
+              "orca:display-name": "Identifiers",
+              "orca:description": "Code that uniquely identifies a financial instrument",
+              "orca:order": 500,
+              "rdfs:member": [
+                {
+                  "@id": "ecp://dbor/2018/08/29/futures-options/metadata/source-exchange"
+                },
+                {
+                  "@id": "ecp://dbor/2018/08/29/futures-options/metadata/source-classification"
+                },
+                {
+                  "@id": "ecp://dbor/2018/08/29/futures-options/metadata/group-ticker"
+                }
+              ]
+            },
+            {
+              "@type": [
+                "orca:AttributeGroup"
+              ],
+              "orca:definition-id": {
+                "@value": "2",
+                "@type": "xsd:long"
+              },
+              "orca:name": "defining",
+              "orca:display-name": "Defining Attributes",
+              "orca:description": "NOT USED AT THIS TIME",
+              "rdfs:member": [
+                {
+                  "@id": "ecp://dbor/2018/08/29/futures-options/metadata/source-exchange"
+                },
+                {
+                  "@id": "ecp://dbor/2018/08/29/futures-options/metadata/source-classification"
+                },
+                {
+                  "@id": "ecp://dbor/2018/08/29/futures-options/metadata/group-ticker"
+                }
+              ]
+            }
+          ],
+          "orca:UniqueIndex": [
+            {
+              "@type": [
+                "orca:UniqueIndex"
+              ],
+              "orca:definition-id": {
+                "@value": "1",
+                "@type": "xsd:long"
+              },
+              "orca:name": "defining",
+              "orca:display-name": "Defining Attributes",
+              "orca:description": "NOT USED AT THIS TIME",
+              "rdfs:member": [
+                {
+                  "@id": "ecp://dbor/2018/08/29/futures-options/metadata/group-ticker"
+                },
+                {
+                  "@id": "ecp://dbor/2018/08/29/futures-options/metadata/source-classification"
+                },
+                {
+                  "@id": "ecp://dbor/2018/08/29/futures-options/metadata/source-exchange"
+                }
+              ]
+            }
+          ],
+          "sh:targetClass": [
+            {
+              "@id": "ecp://dbor/2018/08/29/futures-options/metadata/Spec"
+            }
+          ]
+        },
+        {
+          "@id": "ecp://dbor/2018/08/29/futures-options/metadata/Series",
+          "@type": [
+            "sh:NodeShape",
+            "orca:EntityDefinitionShape"
+          ],
+          "rdfs:subClassOf": [
+            {
+              "@id": "ecp://dbor/2018/01/01/ORCASchema/Entity"
+            }
+          ],
+          "orca:definition-id": {
+            "@value": "2",
+            "@type": "xsd:long"
+          },
+          "orca:name": "Series",
+          "orca:display-name": "Contract Series",
+          "orca:description": "Series",
+          "sh:property": [
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/series-periodicity-type"
+              },
+              "sh:minCount": 1,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/series-periodicity-type",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1101",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "series-periodicity-type",
+                "orca:display-name": "PERIODICITY TYPE",
+                "orca:description": "METHOD OF DELIVERY",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": true,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/listing-rule"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/listing-rule",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1102",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "listing-rule",
+                "orca:display-name": "LISTING RULE",
+                "orca:description": "IS PRIMARY",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/mirror-series"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/mirror-series",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1112",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "mirror-series",
+                "orca:display-name": "MIRROR SERIES",
+                "orca:description": "MIRROR SERIES",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/series-contract-spec"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/series-contract-spec",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1113",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "series-contract-spec",
+                "orca:display-name": "Contract Spec of Series",
+                "orca:description": "Contract Spec of Series",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": true,
+                "orca:attribute-type": "IRI",
+                "ui-hints:visible": true,
+                "search-hints:search-key": true,
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:nodeKind": {
+                    "@id": "sh:IRI"
+                  },
+                  "sh:class": {
+                    "@id": "ecp://dbor/2018/08/29/futures-options/metadata/Spec"
+                  },
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ],
+          "orca:AttributeGroup": [
+            {
+              "@type": [
+                "orca:AttributeGroup"
+              ],
+              "orca:definition-id": {
+                "@value": "1",
+                "@type": "xsd:long"
+              },
+              "orca:name": "identifiers",
+              "orca:display-name": "Identifiers",
+              "orca:description": "Code that uniquely identifies a financial instrument",
+              "orca:order": 500,
+              "rdfs:member": [
+                {
+                  "@id": "ecp://dbor/2018/08/29/futures-options/metadata/series-periodicity-type"
+                }
+              ]
+            },
+            {
+              "@type": [
+                "orca:AttributeGroup"
+              ],
+              "orca:definition-id": {
+                "@value": "2",
+                "@type": "xsd:long"
+              },
+              "orca:name": "defining",
+              "orca:display-name": "Defining Attributes",
+              "rdfs:member": [
+                {
+                  "@id": "ecp://dbor/2018/08/29/futures-options/metadata/series-periodicity-type"
+                }
+              ]
+            }
+          ],
+          "sh:targetClass": [
+            {
+              "@id": "ecp://dbor/2018/08/29/futures-options/metadata/Series"
+            }
+          ]
+        },
+        {
+          "@id": "ecp://dbor/2018/08/29/futures-options/metadata/ContractPeriod",
+          "@type": [
+            "sh:NodeShape",
+            "orca:EntityDefinitionShape"
+          ],
+          "rdfs:subClassOf": [
+            {
+              "@id": "ecp://dbor/2018/01/01/ORCASchema/Entity"
+            }
+          ],
+          "orca:definition-id": {
+            "@value": "3",
+            "@type": "xsd:long"
+          },
+          "orca:name": "ContractPeriod",
+          "orca:display-name": "Contract Period",
+          "orca:description": "Contract Period",
+          "sh:property": [
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/period-periodicity-type"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/period-periodicity-type",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1201",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "period-periodicity-type",
+                "orca:display-name": "PERIODICITY TYPE",
+                "orca:description": "METHOD OF DELIVERY",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": true,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/period"
+              },
+              "sh:minCount": 1,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/period",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1202",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "period",
+                "orca:display-name": "PERIOD",
+                "orca:description": "Period",
+                "orca:language-aware": false,
+                "orca:indexed": true,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": true,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/ticker-symbol"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/ticker-symbol",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1203",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "ticker-symbol",
+                "orca:display-name": "TICKER SYMBOL",
+                "orca:description": "Ticker Symbol",
+                "orca:language-aware": false,
+                "orca:indexed": true,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": true,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/period-symbol-suffix"
+              },
+              "sh:minCount": 1,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/period-symbol-suffix",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1204",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "period-symbol-suffix",
+                "orca:display-name": "PERIOD SYMBOL SUFFIX",
+                "orca:description": "Period Symbol Suffix",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/period-contract-spec"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/period-contract-spec",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1210",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "period-contract-spec",
+                "orca:display-name": "Contract Spec of Period",
+                "orca:description": "Contract Spec of Period",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": false,
+                "orca:transitory": true,
+                "orca:attribute-type": "IRI",
+                "ui-hints:visible": true,
+                "search-hints:search-key": true,
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:nodeKind": {
+                    "@id": "sh:IRI"
+                  },
+                  "sh:class": {
+                    "@id": "ecp://dbor/2018/08/29/futures-options/metadata/Spec"
+                  },
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/maturity-date"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/maturity-date",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1211",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "maturity-date",
+                "orca:display-name": "MATURITY DATE",
+                "orca:description": "Maturity Date",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/first-trade-date"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/first-trade-date",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1212",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "first-trade-date",
+                "orca:display-name": "FIRST TRADE DATE",
+                "orca:description": "First Trade Date",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/last-trade-date"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/last-trade-date",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1213",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "last-trade-date",
+                "orca:display-name": "LAST TRADE DATE",
+                "orca:description": "Last Trade Date",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/first-delivery-date"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/first-delivery-date",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1214",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "first-delivery-date",
+                "orca:display-name": "FIRST DELIVERY DATE",
+                "orca:description": "First Delivery Date",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/last-delivery-date"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/last-delivery-date",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1215",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "last-delivery-date",
+                "orca:display-name": "LAST DELIVERY DATE",
+                "orca:description": "Last Delivery Date",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/initial-inventory-date"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/initial-inventory-date",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1216",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "initial-inventory-date",
+                "orca:display-name": "INITIAL INVENTORY DATE",
+                "orca:description": "Initial Inventory Date",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/final-inventory-date"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/final-inventory-date",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1217",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "final-inventory-date",
+                "orca:display-name": "FINAL INVENTORY DATE",
+                "orca:description": "Final Inventory Date",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/first-intent-date"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/first-intent-date",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1218",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "first-intent-date",
+                "orca:display-name": "FIRST INTENT DATE",
+                "orca:description": "First Intent Date",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/last-intent-date"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/last-intent-date",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1219",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "last-intent-date",
+                "orca:display-name": "LAST INTENT DATE",
+                "orca:description": "Last Intent Date",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/position-removal-date"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/position-removal-date",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1220",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "position-removal-date",
+                "orca:display-name": "POSITION REMOVAL DATE",
+                "orca:description": "Position Removal Date",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/first-notice-date"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/first-notice-date",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1221",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "first-notice-date",
+                "orca:display-name": "FIRST NOTICE DATE",
+                "orca:description": "First Notice Date",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/last-notice-date"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/last-notice-date",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1222",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "last-notice-date",
+                "orca:display-name": "LAST NOTICE DATE",
+                "orca:description": "Last Notice Date",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/last-efp-date"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/last-efp-date",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1223",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "last-efp-date",
+                "orca:display-name": "LAST EFP DATE",
+                "orca:description": "Last EFP Date",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/first-block-tas-dATE"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/first-block-tas-dATE",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1224",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "first-block-tas-dATE",
+                "orca:display-name": "FIRST BLOCK TAS DATE",
+                "orca:description": "First Block TAS DATE",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/last-block-tas-date"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/last-block-tas-date",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1225",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "last-block-tas-date",
+                "orca:display-name": "LAST BLOCK TAS DATE",
+                "orca:description": "Last Block TAS DATE",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/erosion-start-date"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/erosion-start-date",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1226",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "erosion-start-date",
+                "orca:display-name": "EROSION START DATE",
+                "orca:description": "Erosion start DATE",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ],
+          "orca:AttributeGroup": [
+            {
+              "@type": [
+                "orca:AttributeGroup"
+              ],
+              "orca:definition-id": {
+                "@value": "1",
+                "@type": "xsd:long"
+              },
+              "orca:name": "identifiers",
+              "orca:display-name": "Identifiers",
+              "orca:description": "Code that uniquely identifies a financial instrument",
+              "orca:order": 500,
+              "rdfs:member": [
+                {
+                  "@id": "ecp://dbor/2018/08/29/futures-options/metadata/period"
+                }
+              ]
+            },
+            {
+              "@type": [
+                "orca:AttributeGroup"
+              ],
+              "orca:definition-id": {
+                "@value": "2",
+                "@type": "xsd:long"
+              },
+              "orca:name": "defining",
+              "orca:display-name": "Defining Attributes",
+              "rdfs:member": [
+                {
+                  "@id": "ecp://dbor/2018/08/29/futures-options/metadata/period"
+                }
+              ]
+            }
+          ],
+          "sh:targetClass": [
+            {
+              "@id": "ecp://dbor/2018/08/29/futures-options/metadata/ContractPeriod"
+            }
+          ]
+        },
+        {
+          "@id": "ecp://dbor/2018/08/29/futures-options/metadata/MarketQuotationRule",
+          "@type": [
+            "sh:NodeShape",
+            "orca:EntityDefinitionShape"
+          ],
+          "rdfs:subClassOf": [
+            {
+              "@id": "ecp://dbor/2018/01/01/ORCASchema/Entity"
+            }
+          ],
+          "orca:definition-id": {
+            "@value": "4",
+            "@type": "xsd:long"
+          },
+          "orca:name": "MarketQuotationRule",
+          "orca:display-name": "Market Quotation Rule",
+          "orca:description": "Market Quotation Rule",
+          "sh:property": [
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/rule-contract-spec"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/rule-contract-spec",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1301",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "rule-contract-spec",
+                "orca:display-name": "Contract Spec of Market Quotation Rule",
+                "orca:description": "Contract Spec of Market Quotation Rule",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": false,
+                "orca:transitory": true,
+                "orca:attribute-type": "IRI",
+                "ui-hints:visible": true,
+                "search-hints:search-key": true,
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:nodeKind": {
+                    "@id": "sh:IRI"
+                  },
+                  "sh:class": {
+                    "@id": "ecp://dbor/2018/08/29/futures-options/metadata/Spec"
+                  },
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/product-code-root"
+              },
+              "sh:minCount": 1,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/product-code-root",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1302",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "product-code-root",
+                "orca:display-name": "PRODUCT CODE ROOT",
+                "orca:description": "Product Code Root",
+                "orca:language-aware": false,
+                "orca:indexed": true,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": true,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/rule-trading-platform"
+              },
+              "sh:minCount": 1,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/rule-trading-platform",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1303",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "rule-trading-platform",
+                "orca:display-name": "TRADING PLATFORM",
+                "orca:description": "Trading Platform",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": true,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "IRI",
+                "ui-hints:referenced-attribute": {
+                  "@id": "ecp://dbor/fmm/metadata/market-name"
+                },
+                "ui-hints:visible": true,
+                "search-hints:search-key": true,
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:nodeKind": {
+                    "@id": "sh:IRI"
+                  },
+                  "sh:class": {
+                    "@id": "ecp://dbor/fmm/metadata/market"
+                  },
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ],
+          "orca:AttributeGroup": [
+            {
+              "@type": [
+                "orca:AttributeGroup"
+              ],
+              "orca:definition-id": {
+                "@value": "1",
+                "@type": "xsd:long"
+              },
+              "orca:name": "identifiers",
+              "orca:display-name": "Identifiers",
+              "orca:description": "Code that uniquely identifies a financial instrument",
+              "orca:order": 500,
+              "rdfs:member": [
+                {
+                  "@id": "ecp://dbor/2018/08/29/futures-options/metadata/product-code-root"
+                },
+                {
+                  "@id": "ecp://dbor/2018/08/29/futures-options/metadata/rule-trading-platform"
+                }
+              ]
+            },
+            {
+              "@type": [
+                "orca:AttributeGroup"
+              ],
+              "orca:definition-id": {
+                "@value": "2",
+                "@type": "xsd:long"
+              },
+              "orca:name": "defining",
+              "orca:display-name": "Defining Attributes",
+              "rdfs:member": [
+                {
+                  "@id": "ecp://dbor/2018/08/29/futures-options/metadata/product-code-root"
+                },
+                {
+                  "@id": "ecp://dbor/2018/08/29/futures-options/metadata/rule-trading-platform"
+                }
+              ]
+            }
+          ],
+          "sh:targetClass": [
+            {
+              "@id": "ecp://dbor/2018/08/29/futures-options/metadata/MarketQuotationRule"
+            }
+          ]
+        },
+        {
+          "@id": "ecp://dbor/2018/08/29/futures-options/metadata/Quote",
+          "@type": [
+            "sh:NodeShape",
+            "orca:EntityDefinitionShape"
+          ],
+          "rdfs:subClassOf": [
+            {
+              "@id": "ecp://dbor/2018/01/01/ORCASchema/Entity"
+            }
+          ],
+          "orca:definition-id": {
+            "@value": "5",
+            "@type": "xsd:long"
+          },
+          "orca:name": "Quote",
+          "orca:display-name": "Quote",
+          "orca:description": "Quote",
+          "sh:property": [
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/quote-contract-period"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/quote-contract-period",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1401",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "quote-contract-period",
+                "orca:display-name": "Contract Period of Quote",
+                "orca:description": "Contract Period of Quote",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": false,
+                "orca:transitory": true,
+                "orca:attribute-type": "IRI",
+                "ui-hints:referenced-attribute": {
+                  "@id": "ecp://dbor/2018/08/29/futures-options/metadata/period"
+                },
+                "ui-hints:visible": true,
+                "search-hints:search-key": true,
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:nodeKind": {
+                    "@id": "sh:IRI"
+                  },
+                  "sh:class": {
+                    "@id": "ecp://dbor/2018/08/29/futures-options/metadata/ContractPeriod"
+                  },
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/symbol"
+              },
+              "sh:minCount": 1,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/symbol",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1402",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "symbol",
+                "orca:display-name": "SYMBOL",
+                "orca:description": "Symbol",
+                "orca:language-aware": false,
+                "orca:indexed": true,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": true,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/quote-trading-platform"
+              },
+              "sh:minCount": 1,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/quote-trading-platform",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1403",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "quote-trading-platform",
+                "orca:display-name": "TRADING PLATFORM",
+                "orca:description": "Trading Platform",
+                "orca:language-aware": false,
+                "orca:indexed": true,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": true,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "IRI",
+                "ui-hints:referenced-attribute": {
+                  "@id": "ecp://dbor/fmm/metadata/market-name"
+                },
+                "ui-hints:visible": true,
+                "search-hints:search-key": true,
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:nodeKind": {
+                    "@id": "sh:IRI"
+                  },
+                  "sh:class": {
+                    "@id": "ecp://dbor/fmm/metadata/market"
+                  },
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/ric"
+              },
+              "sh:minCount": 1,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/ric",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1404",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "ric",
+                "orca:display-name": "RIC",
+                "orca:description": "Ric",
+                "orca:language-aware": false,
+                "orca:indexed": true,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": true,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/order-type"
+              },
+              "sh:minCount": 1,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/order-type",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1405",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "order-type",
+                "orca:display-name": "ORDER TYPE",
+                "orca:description": "Order Type",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/actual-first-trading-day"
+              },
+              "sh:minCount": 1,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/actual-first-trading-day",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1406",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "actual-first-trading-day",
+                "orca:display-name": "ACTUAL FIRST TRADING DAY",
+                "orca:description": "Actual First Trading Day",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/trading-status"
+              },
+              "sh:minCount": 1,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/trading-status",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1407",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "trading-status",
+                "orca:display-name": "TRADING STATUS",
+                "orca:description": "Trading Status",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": true,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:minLength": 1,
+                  "sh:maxLength": 100,
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "sh:path": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/test-ad-20"
+              },
+              "sh:minCount": 0,
+              "sh:maxCount": 1,
+              "sh:class": {
+                "@id": "ecp://dbor/2018/08/29/futures-options/metadata/test-ad-20",
+                "@type": [
+                  "sh:NodeShape",
+                  "orca:AttributeDefinitionShape"
+                ],
+                "rdfs:subClassOf": [
+                  {
+                    "@id": "ecp://dbor/2018/01/01/ORCASchema/Attribute"
+                  }
+                ],
+                "orca:definition-id": {
+                  "@value": "1408",
+                  "@type": "xsd:long"
+                },
+                "orca:name": "test-ad-20",
+                "orca:display-name": "test-ad-20 DN",
+                "orca:description": "test-ad-20 DS",
+                "orca:language-aware": false,
+                "orca:indexed": false,
+                "orca:expert": false,
+                "orca:hidden": false,
+                "orca:preferred": false,
+                "orca:effective-time-supported": false,
+                "orca:transitory": false,
+                "orca:attribute-type": "String",
+                "ui-hints:visible": true,
+                "search-hints:search-key": false,
+                "sh:property": {
+                  "@type": [
+                    "sh:propertyShape"
+                  ],
+                  "sh:datatype": {
+                    "@id": "xsd:string"
+                  },
+                  "sh:path": {
+                    "@list": [
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/version"
+                      },
+                      {
+                        "@id": "ecp://dbor/2018/01/01/ORCASchema/payload"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ],
+          "orca:AttributeGroup": [
+            {
+              "@type": [
+                "orca:AttributeGroup"
+              ],
+              "orca:definition-id": {
+                "@value": "1",
+                "@type": "xsd:long"
+              },
+              "orca:name": "identifiers",
+              "orca:display-name": "Identifiers",
+              "orca:description": "Code that uniquely identifies a financial instrument",
+              "orca:order": 500,
+              "rdfs:member": [
+                {
+                  "@id": "ecp://dbor/2018/08/29/futures-options/metadata/symbol"
+                },
+                {
+                  "@id": "ecp://dbor/2018/08/29/futures-options/metadata/quote-trading-platform"
+                }
+              ]
+            },
+            {
+              "@type": [
+                "orca:AttributeGroup"
+              ],
+              "orca:definition-id": {
+                "@value": "2",
+                "@type": "xsd:long"
+              },
+              "orca:name": "defining",
+              "orca:display-name": "Defining Attributes",
+              "rdfs:member": [
+                {
+                  "@id": "ecp://dbor/2018/08/29/futures-options/metadata/symbol"
+                },
+                {
+                  "@id": "ecp://dbor/2018/08/29/futures-options/metadata/quote-trading-platform"
+                }
+              ]
+            }
+          ],
+          "orca:UniqueIndex": [
+            {
+              "@type": [
+                "orca:UniqueIndex"
+              ],
+              "orca:definition-id": {
+                "@value": "1",
+                "@type": "xsd:long"
+              },
+              "orca:name": "uniqueRic",
+              "orca:display-name": "Unique Ric",
+              "rdfs:member": [
+                {
+                  "@id": "ecp://dbor/2018/08/29/futures-options/metadata/ric"
+                }
+              ]
+            },
+            {
+              "@type": [
+                "orca:UniqueIndex"
+              ],
+              "orca:definition-id": {
+                "@value": "2",
+                "@type": "xsd:long"
+              },
+              "orca:name": "defining",
+              "orca:display-name": "Defining Attributes",
+              "rdfs:member": [
+                {
+                  "@id": "ecp://dbor/2018/08/29/futures-options/metadata/quote-trading-platform"
+                },
+                {
+                  "@id": "ecp://dbor/2018/08/29/futures-options/metadata/symbol"
+                }
+              ]
+            }
+          ],
+          "sh:targetClass": [
+            {
+              "@id": "ecp://dbor/2018/08/29/futures-options/metadata/Quote"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "@context": {
+    "orca": "ecp://dbor/2018/01/01/ORCASchema/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "search-hints": "ecp://dbor/2018/01/01/search-hints/",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "ui-hints": "ecp://dbor/2018/01/01/ui-hints/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/"
+  }
+}
